@@ -29,6 +29,19 @@ body{
     width: 100%;
 }
 
+.typing-container {
+    display: block;
+    align-items: center;
+}
+
+.typing-effect{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    animation: typing 2s steps(20, end) 2.5s, step-end infinite 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
 h1{
     color:#66bfbf;
     font-size: 5rem;
