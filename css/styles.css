@@ -1,162 +1,90 @@
-body{
+/* =========================
+   Base
+========================= */
+body {
   text-align: center;
   font-family: "Merriweather", serif;
   margin: 0;
-  padding: 80px 0 0;
+  padding: 80px 0 0; /* space for fixed navbar */
 }
+html, body { overflow-x: hidden; }
 
+h1 {
+  color: #66bfbf;
+  font-size: 5rem;
+  margin: 50px auto 0;
+  font-family: "Montserrat", cursive;
+}
+h2 { color: #66bfbf; font-size: 2.5rem; padding-bottom: 10px; }
+h3 { color: #11999e; font-family: "Montserrat", sans-serif; }
+
+p  { line-height: 1.6; font-size: 1.125rem; max-width: none; }
+
+a  { color: #11999e; font-family: "Montserrat", sans-serif; margin: 10px 20px; text-decoration: none; }
+
+hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px auto; }
+
+/* =========================
+   Navbar
+========================= */
 .navbar-brand {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.75rem !important; 
-  flex-direction: row !important; 
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
-
 .navbar-brand .black-gradient {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container{
-  display:flex;
-  flex-direction:column;
-  width:100%;
-  justify-content:center;
-  align-items:center;
-  margin:0;     
-  padding:0;
+/* =========================
+   Hero / Top
+========================= */
+.top-container {
+  background-color: #e4f9f5;
+  width: 100%;
+}
+.mountain {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.typing-effect {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  /* NOTE: you reference keyframes 'typing', ensure they're defined elsewhere if you want the effect */
 }
 
-.flex-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    gap: 5px;
+/* =========================
+   Profile
+========================= */
+.profile_picture {
+  height: 200px;
+  width: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+@media (min-width: 992px) { /* lg+ */
+  .profile_picture { height: 350px; width: 280px; }
 }
 
-.top-container{
-    background-color: #e4f9f5;
-    height: 100%;
-    width: 100%;
-    display: block;
-    align-items: center;
-}
-
-.typing-effect{
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    animation: typing 2s steps(20, end) 2.5s, step-end infinite 2.5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-}
-
-h1{
-    color:#66bfbf;
-    font-size: 5rem;
-    margin: 50px auto 0 auto;
-    font-family: "Montserrat" cursive;
-}
-
-h2{
-    color: #66bfbf;
-    font-size: 2.5rem;
-    padding-bottom: 10px;
-}
-
-.highlight{
-    text-decoration: underline;
-}
-
-h3{
-    color: #11999e;
-    font-family: "Montserrat", sans-serif;
-}
-
-p { 
-    line-height: 1.6; 
-    font-size: 1.125rem; 
-    max-width: none;
-}
-
-hr {
-  border: dotted #eaf6f6 6px;
-  border-bottom: none;
-  width: 4%;
-  margin: 50px auto;
-}
-
-a {
-  color: #11999e;
-  font-family: "Montserrat", sans-serif;
-  margin: 10px 20px;
-  text-decoration: none;
-}
-
-.mountain{
-    height: 300px;
-    text-align: center;
-}
-
-.profile_picture{
-    height: 200px;
-    width: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-}
-
-
-@media (min-width: 992px){ /* lg and up */
-  .profile_picture{
-    height: 350px;
-    width: 280px;
-  }
-}
-
-
-.project_picture{
-    height: 200px;
-    width: 300px;
-    object-fit: scale-down;
-}
-
-.btn {
-  background: #11cdd4;
-  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
-  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
-  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-.project{
-    background-color: #FFFDF6;
-    margin: 5px;
-    padding: 5px;
-    width: 400px;
-}
-
+/* =========================
+   Projects Carousel
+========================= */
+/* wrapper reserves space so outside arrows don't cause overflow */
 .projects-carousel-wrap {
   position: relative;
-  overflow: visible;          /* key: don't clip the arrows */
+  padding: 0 64px;
+  overflow: visible;
 }
 
-/* shared style for both arrows */
+/* shared arrow styles */
 .projects-carousel-wrap .projects-outside {
   position: absolute;
   top: 50%;
-  bottom: auto;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
@@ -164,31 +92,24 @@ a {
   background: rgba(0,0,0,.35);
   backdrop-filter: blur(2px);
   z-index: 5;
+  bottom: auto;
 }
+.projects-carousel-wrap .carousel-control-prev.projects-outside { left: 16px; }
+.projects-carousel-wrap .carousel-control-next.projects-outside { right: 16px; }
 
-/* place them OUTSIDE on large screens */
-.projects-carousel-wrap .carousel-control-prev.projects-outside { left: -56px; }
-.projects-carousel-wrap .carousel-control-next.projects-outside { right: -56px; }
-
-/* keep icons visible on light backgrounds */
+/* icons visible on light background */
 .projects-carousel-wrap .carousel-control-prev-icon,
-.projects-carousel-wrap .carousel-control-next-icon { filter: invert(1); }
-
-/* pull arrows back inside on smaller screens */
-@media (max-width: 992px) {
-  .projects-carousel-wrap .carousel-control-prev.projects-outside { left: 8px; }
-  .projects-carousel-wrap .carousel-control-next.projects-outside { right: 8px; }
+.projects-carousel-wrap .carousel-control-next-icon {
+  filter: invert(1);
 }
 
-#projectsCarousel { 
-  padding-bottom: 2.25rem; 
-}
-
+/* indicators: below the slides, larger dots */
+#projectsCarousel { padding-bottom: .5rem; }
 #projectsCarousel .carousel-indicators {
-  bottom: -12px;
-  gap: .5rem;            
+  position: static;
+  margin-top: 1rem;
+  gap: .5rem;
 }
-
 #projectsCarousel .carousel-indicators [data-bs-target] {
   width: 14px;
   height: 14px;
@@ -197,28 +118,23 @@ a {
   opacity: .9;
   border: 1px solid #343a40;
 }
-
 #projectsCarousel .carousel-indicators .active {
-  background-color: #3EB489;   /* active color */
-  opacity: 1;
+  background-color: #3EB489;
   border-color: #3EB489;
+  opacity: 1;
 }
 
-#projectsCarousel .carousel-control-prev-icon,
-#projectsCarousel .carousel-control-next-icon {
-  filter: invert(1); 
+/* responsive: pull arrows in on small screens */
+@media (max-width: 992px) {
+  .projects-carousel-wrap { padding: 0 12px; }
+  .projects-carousel-wrap .carousel-control-prev.projects-outside { left: 8px; }
+  .projects-carousel-wrap .carousel-control-next.projects-outside { right: 8px; }
 }
 
-.icon{
-    height: 20px;
-    width: 20px;
-}
-
-.Git{
-    background-color: black;
-}
-
-footer{
-    background-color: #66bfbf;
-    width: 100%;
+/* =========================
+   Footer
+========================= */
+footer {
+  background-color: #66bfbf;
+  width: 100%;
 }
