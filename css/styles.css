@@ -1,9 +1,25 @@
+/* fonts (if you added the Google Fonts link) */
+body { font-family: "Merriweather", serif; }
+h1, h2, h3, .navbar-brand span { font-family: "Montserrat", sans-serif; }
+
+/* brand helpers used by Contact */
+.text-brand { color:#3EB489; }
+.btn-brand { background:#3EB489; border-color:#3EB489; color:#fff; }
+.btn-brand:hover { background:#2e9d79; border-color:#2e9d79; }
+.btn-outline-brand { border:1px solid #3EB489; color:#3EB489; background:transparent; }
+.btn-outline-brand:hover { background:#3EB489; color:#fff; }
+
+.contact-card { background:#fff; border-radius:16px; padding:1.5rem; box-shadow:0 10px 24px rgba(0,0,0,.06); }
+
+/* optional: smooth scroll */
+
+html { scroll-behavior: smooth; }
+
 /* =========================
    Base
 ========================= */
 body {
   text-align: center;
-  font-family: "Merriweather", serif;
   margin: 0;
   padding: 80px 0 0; /* space for fixed navbar */
 }
@@ -13,14 +29,16 @@ h1 {
   color: #66bfbf;
   font-size: 5rem;
   margin: 50px auto 0;
-  font-family: "Montserrat", cursive;
 }
+
+
 h2 { color: #66bfbf; font-size: 2.5rem; padding-bottom: 10px; }
-h3 { color: #11999e; font-family: "Montserrat", sans-serif; }
+
+h3 { color: #11999e; }
 
 p  { line-height: 1.6; font-size: 1.125rem; max-width: none; }
 
-a  { color: #11999e; font-family: "Montserrat", sans-serif; margin: 10px 20px; text-decoration: none; }
+a  { color: #11999e; margin: 10px 20px; text-decoration: none; }
 
 hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px auto; }
 
@@ -51,11 +69,20 @@ hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px au
   object-fit: cover;
   display: block;
 }
-.typing-effect {
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  /* NOTE: you reference keyframes 'typing', ensure they're defined elsewhere if you want the effect */
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
 }
+.typing-effect {
+  display:inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:2px solid #66bfbf;
+  animation: typing 2.5s steps(20, end) 1, blink .8s step-end infinite;
+}
+@keyframes blink { 50% { border-color: transparent; } }
+
 
 /* =========================
    Profile
@@ -129,6 +156,46 @@ hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px au
   .projects-carousel-wrap { padding: 0 12px; }
   .projects-carousel-wrap .carousel-control-prev.projects-outside { left: 8px; }
   .projects-carousel-wrap .carousel-control-next.projects-outside { right: 8px; }
+}
+
+/* =========================
+   Projects Card
+========================= */
+/* Make every project title stand out */
+.card.card-projects .card-title{
+  font-weight: 700;        
+  color: #0f6b60;  
+  line-height: 1.25;
+  margin-bottom: .25rem;
+}
+
+/* On hover, pop the title color a bit more */
+.card.card-projects:hover .card-title{
+  color: #3EB489;   
+}
+
+/* =========================
+   Contact
+========================= */
+.btn-brand {
+  background:#3EB489;
+  border-color:#3EB489;
+  color:#fff;
+}
+.btn-brand:hover { background:#2e9d79; border-color:#2e9d79; }
+
+.btn-outline-brand {
+  border:1px solid #3EB489;
+  color:#3EB489;
+  background:transparent;
+}
+.btn-outline-brand:hover { background:#3EB489; color:#fff; }
+
+.contact-card{
+  background:#fff;
+  border-radius:16px;
+  padding:1.5rem;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
 }
 
 /* =========================
