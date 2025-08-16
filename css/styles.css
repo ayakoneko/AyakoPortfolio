@@ -1,0 +1,224 @@
+body{
+  text-align: center;
+  font-family: "Merriweather", serif;
+  margin: 0;
+  padding: 80px 0 0;
+}
+
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important; 
+  flex-direction: row !important; 
+}
+
+.navbar-brand .black-gradient {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.container{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  justify-content:center;
+  align-items:center;
+  margin:0;     
+  padding:0;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.top-container{
+    background-color: #e4f9f5;
+    height: 100%;
+    width: 100%;
+    display: block;
+    align-items: center;
+}
+
+.typing-effect{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    animation: typing 2s steps(20, end) 2.5s, step-end infinite 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+h1{
+    color:#66bfbf;
+    font-size: 5rem;
+    margin: 50px auto 0 auto;
+    font-family: "Montserrat" cursive;
+}
+
+h2{
+    color: #66bfbf;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+.highlight{
+    text-decoration: underline;
+}
+
+h3{
+    color: #11999e;
+    font-family: "Montserrat", sans-serif;
+}
+
+p { 
+    line-height: 1.6; 
+    font-size: 1.125rem; 
+    max-width: none;
+}
+
+hr {
+  border: dotted #eaf6f6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 50px auto;
+}
+
+a {
+  color: #11999e;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.mountain{
+    height: 300px;
+    text-align: center;
+}
+
+.profile_picture{
+    height: 200px;
+    width: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+
+@media (min-width: 992px){ /* lg and up */
+  .profile_picture{
+    height: 350px;
+    width: 280px;
+  }
+}
+
+
+.project_picture{
+    height: 200px;
+    width: 300px;
+    object-fit: scale-down;
+}
+
+.btn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.project{
+    background-color: #FFFDF6;
+    margin: 5px;
+    padding: 5px;
+    width: 400px;
+}
+
+.projects-carousel-wrap {
+  position: relative;
+  overflow: visible;          /* key: don't clip the arrows */
+}
+
+/* shared style for both arrows */
+.projects-carousel-wrap .projects-outside {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+/* place them OUTSIDE on large screens */
+.projects-carousel-wrap .carousel-control-prev.projects-outside { left: -56px; }
+.projects-carousel-wrap .carousel-control-next.projects-outside { right: -56px; }
+
+/* keep icons visible on light backgrounds */
+.projects-carousel-wrap .carousel-control-prev-icon,
+.projects-carousel-wrap .carousel-control-next-icon { filter: invert(1); }
+
+/* pull arrows back inside on smaller screens */
+@media (max-width: 992px) {
+  .projects-carousel-wrap .carousel-control-prev.projects-outside { left: 8px; }
+  .projects-carousel-wrap .carousel-control-next.projects-outside { right: 8px; }
+}
+
+#projectsCarousel { 
+  padding-bottom: 2.25rem; 
+}
+
+#projectsCarousel .carousel-indicators {
+  bottom: -12px;
+  gap: .5rem;            
+}
+
+#projectsCarousel .carousel-indicators [data-bs-target] {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #6c757d;
+  opacity: .9;
+  border: 1px solid #343a40;
+}
+
+#projectsCarousel .carousel-indicators .active {
+  background-color: #3EB489;   /* active color */
+  opacity: 1;
+  border-color: #3EB489;
+}
+
+#projectsCarousel .carousel-control-prev-icon,
+#projectsCarousel .carousel-control-next-icon {
+  filter: invert(1); 
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+}
+
+.Git{
+    background-color: black;
+}
+
+footer{
+    background-color: #66bfbf;
+    width: 100%;
+}
