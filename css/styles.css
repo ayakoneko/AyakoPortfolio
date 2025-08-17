@@ -82,9 +82,21 @@ a{ color: #11999e; margin: 10px 20px; text-decoration: none; }
 .navbar .dropdown-menu { font-size: 0.95rem; }
 
 @media (max-width: 991.98px) {
-  .offcanvas .navbar-nav .nav-link { padding-left: 0; }
-  .offcanvas .nav-social { gap: .75rem; }
+  .offcanvas.offcanvas-end {max-width: 280px;}
+  .offcanvas .nav-social {justify-content: center; gap: 12px;}
+  .offcanvas .navbar-nav {align-items: center;}
+  .offcanvas .navbar-nav .nav-item {width: 100%;}
+  .offcanvas .nav-item.dropdown {display: flex; justify-content: center;align-items: center; width: 100%;}
+  .offcanvas .dropdown-menu {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    right: auto !important;
+    text-align: left; 
+    min-width: 220px;
+  }
 }
+ 
 
 
 /* 2.Hero */
@@ -188,8 +200,8 @@ a{ color: #11999e; margin: 10px 20px; text-decoration: none; }
   width: 44px; height: 44px; border-radius: 999px;
   background: rgba(0,0,0,.35); backdrop-filter: blur(2px); z-index: 5;
 }
-.projects-carousel-wrap .carousel-control-prev.projects-outside{ left: 16px; }
-.projects-carousel-wrap .carousel-control-next.projects-outside{ right: 16px; }
+.projects-carousel-wrap .carousel-control-prev.projects-outside{ left: -44px; }
+.projects-carousel-wrap .carousel-control-next.projects-outside{ right: -44px; }
 .projects-carousel-wrap .carousel-control-prev-icon,
 .projects-carousel-wrap .carousel-control-next-icon{ filter: invert(1); }
 
@@ -207,8 +219,32 @@ a{ color: #11999e; margin: 10px 20px; text-decoration: none; }
 
 @media (max-width: 1200px){
   .projects-carousel-wrap{ padding: 0 12px; }
-  .projects-carousel-wrap .carousel-control-prev.projects-outside{ left: 8px; }
-  .projects-carousel-wrap .carousel-control-next.projects-outside{ right: 8px; }
+  .projects-carousel-wrap .carousel-control-prev.projects-outside{ left: -24px; }
+  .projects-carousel-wrap .carousel-control-next.projects-outside{ right: -24px; }
+}
+
+@media (max-width: 768px){
+  #projectsCarousel .carousel-inner{ display:block; }
+  #projectsCarousel .carousel-item{
+    display:block !important;
+    position: static !important;
+    float: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    margin-bottom:1.25rem;
+  }
+  #projectsCarousel .carousel-item > .row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #projectsCarousel .carousel-item > .row > [class^="col"]{
+    padding-left: .75rem;  
+    padding-right: .75rem;
+  }
+  .projects-carousel-wrap{ padding: 0 12px; } /* you already had this; keep it */
+  .projects-carousel-wrap .projects-outside{ display:none !important; }
+  #projectsCarousel .carousel-indicators{ display:none !important; }
 }
 
 .card-thumb {

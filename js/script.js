@@ -12,6 +12,24 @@ document.querySelectorAll('.dropdown-item.project-link').forEach(a => {
   });
 });
 
+// Project carousel page for smaller screen size
+(function(){
+    const wrap = document.querySelector('.projects-carousel-wrap');
+    const section = document.querySelector('#project');
+    if (!wrap || !section) return;
+
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if (e.isIntersecting) {
+          wrap.classList.add('controls-fixed');
+        } else {
+          wrap.classList.remove('controls-fixed');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    io.observe(section);
+  })();
 
 // Message me form submission (with EmailJS)
 const SERVICE_ID = "service_1no5yec";
