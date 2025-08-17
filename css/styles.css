@@ -1,6 +1,12 @@
-/* fonts (if you added the Google Fonts link) */
-body { font-family: "Merriweather", serif; }
-h1, h2, h3, .navbar-brand span { font-family: "Montserrat", sans-serif; }
+/* =========================
+   fonts and colors
+========================= */
+/* fonts */
+html {
+  font-family: "Poppins", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px; 
+}
 
 /* brand helpers used by Contact */
 .text-brand { color:#3EB489; }
@@ -11,9 +17,6 @@ h1, h2, h3, .navbar-brand span { font-family: "Montserrat", sans-serif; }
 
 .contact-card { background:#fff; border-radius:16px; padding:1.5rem; box-shadow:0 10px 24px rgba(0,0,0,.06); }
 
-/* optional: smooth scroll */
-
-html { scroll-behavior: smooth; }
 
 /* =========================
    Base
@@ -23,6 +26,7 @@ body {
   margin: 0;
   padding: 80px 0 0; /* space for fixed navbar */
 }
+
 html, body { overflow-x: hidden; }
 
 h1 {
@@ -31,15 +35,11 @@ h1 {
   margin: 50px auto 0;
 }
 
-
 h2 { color: #66bfbf; font-size: 2.5rem; padding-bottom: 10px; }
-
 h3 { color: #11999e; }
 
 p  { line-height: 1.6; font-size: 1.125rem; max-width: none; }
-
 a  { color: #11999e; margin: 10px 20px; text-decoration: none; }
-
 hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px auto; }
 
 /* =========================
@@ -57,17 +57,74 @@ hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px au
 }
 
 /* =========================
-   Hero / Top
+   Hero
 ========================= */
-.top-container {
-  background-color: #e4f9f5;
+.hero {
+  position: relative;
+  min-height: 100vh;      /* full viewport height */
   width: 100%;
+  overflow: hidden;
 }
-.mountain {
-  height: 300px;
+
+.hero-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;      /* fills without distortion */
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* subtle top-bottom gradient; tweak strength if you want */
+  background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.25) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;      /* vertically center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+/* Bigger & highlighted name */
+.hero-title {
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 4px 28px rgba(0,0,0,.35);
+  letter-spacing: .5px;
+  /* responsive size: 2.75rem -> 5.75rem as screen grows */
+  font-size: clamp(2.75rem, 8vw, 5.75rem);
+  line-height: 1.05;
+  margin: 0 0 .35rem;
+}
+
+/* Highlight bar under the name */
+.hero-title::after {
+  content: "";
   display: block;
+  height: .22em;
+  width: 8ch;                   /* ~ width of the name highlight */
+  max-width: 70%;
+  margin: .15em auto 0;
+  background: #3EB489;          /* your brand green */
+  border-radius: 999px;
+  opacity: .95;
+}
+
+/* Subtitle styling */
+.hero-subtitle {
+  color: #e9f6f2;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: lowercase;    /* matches your “software developer” vibe */
+  margin: .5rem 0 0;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
 }
 
 @keyframes typing {
@@ -79,7 +136,7 @@ hr { border: dotted #eaf6f6 6px; border-bottom: none; width: 4%; margin: 50px au
   white-space:nowrap;
   overflow:hidden;
   border-right:2px solid #66bfbf;
-  animation: typing 2.5s steps(20, end) 1, blink .8s step-end infinite;
+  animation: typing 3.5s steps(20, end) 1, blink .8s step-end infinite;
 }
 @keyframes blink { 50% { border-color: transparent; } }
 
