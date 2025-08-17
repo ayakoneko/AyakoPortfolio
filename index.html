@@ -12,47 +12,61 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top w-full flex justify-between items-center max-w-7xl mx-auto">
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center gap-3" href="#home">
-                <img src="./images/logo2.jpg" alt="logo" class="w-10 h-10 object-contain" style="height: 2.5rem;">
-                <p class="text-white text-[18px] font-bold cursor-pointer m-0">Ayako Kaneko</p>
+                <img src="./images/logo2.jpg" alt="logo" class="navbar-brand-logo">
+                <p class="brand-name m-0">Ayako Kaneko</p>
             </a>
-            <div class="d-flex align-items-center gap-2">
-                <a class="d-inline-flex align-items-center justify-content-center" href="https://www.linkedin.com/in/ayakokaneko" target="_blank" rel="noopener noreferrer" style="width:2.5rem;height:2.5rem">
-                    <img src="/images/LinkedIn.png" alt="LinkedIn" style="height:2.5rem">
+            <div class="nav-social d-none d-lg-flex">
+                <a href="https://www.linkedin.com/in/ayakokaneko" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="/images/LinkedIn.png" alt="LinkedIn" class="nav-social-img">
                 </a>
-                <a class="d-inline-flex align-items-center justify-content-center" href="https://github.com/AyakoKGriffith" target="_blank" rel="noopener noreferrer" style="width:2.5rem;height:2.5rem">
-                    <img src="/images/GitHub.png" alt="GitHub" style="height:2.5rem">
+                <a href="https://github.com/AyakoKGriffith" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="/images/GitHub.png" alt="GitHub" class="nav-social-img">
                 </a>
             </div>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Open menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+
                 <div class="offcanvas-body">
+                    <div class="nav-social d-lg-none mb-3">
+                        <a href="https://www.linkedin.com/in/ayakokaneko" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <img src="/images/LinkedIn.png" alt="LinkedIn" class="btn-icon__img">
+                        </a>
+                        <a href="https://github.com/AyakoKGriffith" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <img src="/images/GitHub.png" alt="GitHub" class="btn-icon__img">
+                        </a>
+                    </div>
+
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
-                        <li class="nav-item dropdown">
+
+                        <li class="nav-item dropdown align-items-center d-flex">
                             <a class="nav-link" href="#project" id="projectsLink">Projects</a>
-                            <button class="btn btn-link nav-link dropdown-toggle dropdown-toggle-split ms-1 p-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open project list"></button>
+                             <button class="btn btn-link nav-link dropdown-toggle dropdown-toggle-split ms-1 p-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Open project list"></button>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item project-link" href="#proj-tetris" data-slide-to="0">Tetris Game Clone</a></li> 
-                                <li><a class="dropdown-item project-link" href="#proj-timecapsule" data-slide-to="0">Time-capsule Memory System</a></li>
+                                <li><a class="dropdown-item project-link" href="#proj-tetris" data-slide-to="0">Tetris Game Clone</a></li>
                                 <li><a class="dropdown-item project-link" href="#proj-shopping" data-slide-to="0">Shopping Website</a></li>
+                                <li><a class="dropdown-item project-link" href="#proj-timecapsule" data-slide-to="0">Time-capsule Memory System</a></li>
                                 <li><a class="dropdown-item project-link" href="#proj-todoist" data-slide-to="0">Todoist Clone</a></li>
                                 <li><a class="dropdown-item project-link" href="#proj-portfolio" data-slide-to="1">My Portfolio</a></li>
                                 <li><a class="dropdown-item project-link" href="#proj-smarthome" data-slide-to="1">Smart Home Application</a></li>
-                                <li><a class="dropdown-item project-link" href="#proj-dicom" data-slide-to="1">DICOM Data Management</a></li>                
+                                <li><a class="dropdown-item project-link" href="#proj-dicom" data-slide-to="1">DICOM Data Management</a></li>
                                 <li><a class="dropdown-item project-link" href="#proj-XRflashcard" data-slide-to="1">XR Flashcard Project</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -84,19 +98,19 @@
 
             <div class="row justify-content-center">
                 <div class="col-12 col-xl-10 mx-auto">
-                    <div class="row align-items-lg-center g-4">
+                    <div class="row align-items-lg-center gy-4 gx-5">
                         <!-- Photo -->
                         <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0">
                             <img class="profile_picture" src="./images/kaneko-ayako-08082025.jpg" alt="Ayako Kaneko">
                         </div>
 
-                        <div class="col-12 col-lg-8 text-center text-lg-start">
+                        <div class="col-12 col-lg-8 text-center text-lg-start ps-lg-3">
                             <!-- Education -->
-                            <h3 class="border-bottom pb-2 mb-3"><i class="fas fa-graduation-cap me-2"></i>Education</h3>
+                            <h3 class="border-bottom pb-2 mb-3"> <i class="fas fa-graduation-cap me-2"></i>Education</h3>
                             <div class="ps-lg-3">
                                 <div class="mb-3">
                                     <p class="mb-1"><strong>Griffith University Gold Coast Campus</strong></p>
-                                    <p class="text-muted mb-0">Master of Information Technology, Major in Software Development (07/2024 - Present)</p>
+                                    <p class="text-muted mb-0">Master of Information Technology - Software Development (07/2024 - Present)</p>
                                 </div>
                                 <div class="mb-3">
                                     <p class="mb-1"><strong>State University of New York at Geneseo</strong></p>
@@ -105,7 +119,7 @@
                             </div>
 
                             <!-- Work Experience -->
-                            <h3 class="border-bottom pb-2 mt-5 mb-3"><i class="fas fa-briefcase me-2"></i>Work Experience</h3>
+                            <h3 class="border-bottom pb-2 mt-5 mb-3"> <i class="fas fa-briefcase me-2"></i>Work Experience</h3>
                             <div class="ps-lg-3">
                                 <div class="mb-3">
                                     <p class="mb-1"><strong>Insight Business Analytics (Gold Coast, QLD)</strong></p>
@@ -113,7 +127,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <p class="mb-1"><strong>Citibank, N.A., Tokyo Branch</strong></p>
-                                    <p class="text-muted mb-0">Associate Product Manager / Solution Sales Assistant (06/2018 - 06/2024)</p>
+                                    <p class="text-muted mb-0">Associate Product Manager & Solution Sales Assistant (06/2018 - 06/2024)</p>
                                 </div>
                                 <div class="mb-3">
                                     <p class="mb-1"><strong>Deloitte Tax LLP</strong></p>
@@ -146,112 +160,219 @@
                 <!-- Project Page 1 -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                             <div class="col" id="proj-tetris">
-                                <a href="https://github.com/Cedou90/G11_OOSD_Tetris_Game" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/Tetris.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/Tetris.png" alt="Tetris Game" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">Tetris Game Clone</h5>
-                                        <p class="card-description flex-grow-1"> Language: Java </p>
-                                        <p class="card-description flex-grow-1"> A clone of the Tetris Game desktop app made with Java within MVC architecture. </p>
-                                    </div>
-                                </div>
-                                </a>
-                            </div>
+                                        <p class="card-text">Desktop clone of Tetris implemented with clear MVC separation and robust game loop.</p>
 
-                            <div class="col" id="proj-timecapsule">
-                                <a href="https://github.com/mrjwei/cache-to-the-future" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/Time-capsule.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Time-capsule Memory System</h5>
-                                        <p class="card-description flex-grow-1"> Language: React, GitHub </p>
-                                        <p class="card-description flex-grow-1"> A time-capsule memory system in React, encrypted to unlock only when the countdown ends, plus a custom SVG typewriter keyboard for a unique user experience </p>
+                                        <div class="tech-list">
+                                            <span class="tech-pill">Java</span>
+                                            <span class="tech-pill">MVC</span>
+                                            <span class="tech-pill">OOP</span>
+                                        </div>
+
+                                        <div class="card-actions rows-2 mt-auto mb-2" ariel-label="project actions">
+                                            <a class="btn btn-brand" target="_blank" aria-label="Tetris demo">
+                                                <i class="fa-solid fa-video me-1"></i>Demo
+                                            </a>
+                                            <a class="btn btn-outline-brand" href="https://github.com/Cedou90/G11_OOSD_Tetris_Game" target="_blank" rel="noopener noreferrer" aria-label="Tetris GitHub">
+                                                <i class="fa-brands fa-github me-1"></i>Code
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
                             </div>
 
                             <div class="col" id="proj-shopping">
-                                <a href="/#" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/ComingSoon.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/ComingSoon.png" alt="Shopping Website" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">Shopping Website</h5>
-                                        <p class="card-description flex-grow-1"> Language: PHP/Laravel, SQLite </p>
-                                        <p class="card-description flex-grow-1"> Coming soon </p>
+                                        <p class="card-text">E-commerce site with authentication, product catalog and checkout flow.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">PHP</span>
+                                            <span class="tech-pill">Laravel</span>
+                                            <span class="tech-pill">SQLite</span>
+                                        </div>
+
+                                        <div class="card-actions rows-2 mt-auto mb-2" ariel-label="project actions">
+                                            <a class="btn btn-brand" type="button" aria-disabled="true">
+                                                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Link
+                                            </a>
+                                            <a class="btn btn-outline-brand" href="https://github.com/AyakoKGriffith/ShoppingWebsite" target="_blank" rel="noopener noreferrer" aria-label="Shopping Website GitHub">
+                                                <i class="fa-brands fa-github me-1"></i>Code
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
+                            </div>
+
+                            <div class="col" id="proj-timecapsule">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/Time-capsule.png" alt="Time-capsule Memory" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Time-capsule Memory System</h5>
+                                        <p class="card-text">Encrypted messages unlock when a countdown ends. Custom SVG typewriter keyboard for a playful UX.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">React</span>
+                                            <span class="tech-pill">SVG</span>
+                                            <span class="tech-pill">Crypto</span>
+                                        </div>
+
+                                        <div class="card-actions rows-2" ariel-label="project actions">
+                                            <a class="btn btn-brand" type="button" aria-disabled="true">
+                                                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Link
+                                            </a>
+                                            <a class="btn btn-outline-brand" href="https://github.com/mrjwei/cache-to-the-future" target="_blank" rel="noopener noreferrer" aria-label="Time-capsule GitHub">
+                                                <i class="fa-brands fa-github me-1"></i>Code
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col" id="proj-todoist">
-                                <a href="https://github.com/AyakoKGriffith/TodoistClone" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/ComingSoon.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/ComingSoon.png" alt="Todoist Clone" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">Todoist Clone</h5>
-                                        <p class="card-description flex-grow-1"> Language: Golang, JavaScript, PostgreSQL </p>
-                                        <p class="card-description flex-grow-1"> A clone of the Todoist web app made with Golang and no JavaScript framework. </p>
+                                        <p class="card-text">Task management clone focusing on clean API design and pragmatic UX.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">Golang</span>
+                                            <span class="tech-pill">JavaScript</span>
+                                            <span class="tech-pill">PostgreSQL</span>
+                                        </div>
+
+                                        <div class="card-actions rows-2" ariel-label="project actions">
+                                            <a class="btn btn-brand" type="button" aria-disabled="true">
+                                                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Link
+                                            </a>
+                                            <a class="btn btn-outline-brand" href="https://github.com/AyakoKGriffith/TodoistClone" target="_blank" rel="noopener noreferrer" aria-label="Todoist GitHub">
+                                                <i class="fa-brands fa-github me-1"></i>Code
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project Page 2 -->
                     <div class="carousel-item">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4">
                             <div class="col" id="proj-portfolio">
-                                <a href="https://github.com/AyakoKGriffith/AyakoPortfolio" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/Portfolio.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/Portfolio.png" alt="Portfolio" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">My Portfolio</h5>
-                                        <p class="card-description flex-grow-1"> Language: HTML, CSS, JavaScript, Bootstrap </p>
-                                        <p class="card-description flex-grow-1"> A Todoist clone with Golang </p>
+                                        <p class="card-text">Responsive portfolio with projects, contact form (EmailJS) and Bootstrap layout.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">HTML</span>
+                                            <span class="tech-pill">CSS</span>
+                                            <span class="tech-pill">JavaScript</span>
+                                            <span class="tech-pill">Bootstrap</span>
+                                        </div>
+
+                                        <div class="card-actions rows-2" ariel-label="project actions">
+                                            <a class="btn btn-brand" href="https://ayakokgriffith.github.io/AyakoPortfolio/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio GitHub">
+                                                <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Link
+                                            </a>
+                                            <a class="btn btn-outline-brand" href="https://github.com/AyakoKGriffith/AyakoPortfolio" target="_blank" rel="noopener noreferrer" aria-label="Portfolio GitHub">
+                                                <i class="fa-brands fa-github me-1"></i>Code
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
                             </div>
 
                             <div class="col" id="proj-smarthome">
-                                <a href="/#" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/SmartHome.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/SmartHome.png" alt="SmartHome Application" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">Smart Home Application</h5>
-                                        <p class="card-description flex-grow-1"> Method: UML, Use Cases Analysis </p>
-                                        <p class="card-description flex-grow-1">  Designed a modular Smart Home Automation System using UML and use case analysis; defined functional and non-functional specifications for a scalable, secure architecture </p>
+                                        <p class="card-text">Modular smart-home concept: requirements, use-cases, and secure architecture.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">UML</span>
+                                            <span class="tech-pill">Use Cases</span>
+                                        </div>
+
+                                        <div class="card-actions rows-2" ariel-label="project actions">
+                                            <a href="files/SmartHome-UseCase-Design.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-brand">
+                                                <i class="fa-solid fa-file-pdf me-2"></i> View
+                                            </a>
+                                            <a href="files/SmartHome-UseCase-Design.pdf" download class="btn btn-outline-brand">
+                                                <i class="fa-solid fa-download me-2"></i> Download
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
                             </div>
+
                             <div class="col" id="proj-dicom">
-                                <a href="/#" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/DICOM.png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/DICOM.png" alt="DICOM Data Management" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">DICOM Data Management</h5>
-                                        <p class="card-description flex-grow-1"> Tool: Figma </p>
-                                        <p class="card-description flex-grow-1"> Analysed requirements to design a scalable data system tailored for healthcare and research environments </p>
+                                        <p class="card-text">Design for scalable medical-imaging data storage and retrieval workflows.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">Figma</span>
+                                            <span class="tech-pill">System Design</span>
+                                        </div>
+
+                                        <div class="card-actions">
+                                            <a class="btn btn-outline-brand" type="button" aria-disabled="true">
+                                                <i class="fa-regular fa-file-lines me-1"></i>Case Study
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
                             </div>
+
                             <div class="col" id="proj-XRflashcard">
-                                <a href="https://www.youtube.com/shorts/P--j27ir2gs" class="text-decoration-none text-dark">
-                                <div class="card card-projects h-100" style="min-height: 200px">
-                                    <img class="card-img-top" src="images/Unity .png" alt="Card Image" style="height: 150px; object-fit: cover"/>
-                                    <div class="card-body d-flex flex-column">
+                                <div class="card card-projects h-100">
+                                    <div class="ratio ratio-16x9 card-thumb overflow-hidden">
+                                        <img src="images/Unity .png" alt="XR Flashcard" class="card-thumb-img">
+                                    </div>
+                                    <div class="card-body">
                                         <h5 class="card-title">XR Flashcard Project</h5>
-                                        <p class="card-description flex-grow-1"> Language: Unity, C# </p>
-                                        <p class="card-description flex-grow-1"> Designed and developed an interactive Augmented Reality learning application in Unity to enhance science education. Integrated 3D anatomical models with audio narration, interactive quizzes, and labelling features, enabling immersive exploration of human organs and improving student engagement and comprehension.</p>
+                                        <p class="card-text">Augmented reality learning app with 3D anatomy, narration, and quizzes.</p>
+
+                                        <div class="tech-list">
+                                            <span class="tech-pill">Unity</span>
+                                            <span class="tech-pill">C#</span>
+                                            <span class="tech-pill">AR</span>
+                                        </div>
+
+                                        <div class="card-actions">
+                                            <a class="btn btn-brand" href="https://www.youtube.com/shorts/P--j27ir2gs" target="_blank" rel="noopener noreferrer" aria-label="XR video demo">
+                                                <i class="fa-solid fa-video me-1"></i>Demo
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -287,11 +408,11 @@
                     <h4 class="mb-3">Get in Touch</h4>
                     <p class="text-muted small"> Feel free to reach out for collaboration or just a friendly hello.</p>
 
-                    <div class="socials d-flex justify-content-center align-items-center gap-4 flex-wrap">
-                        <a class="btn btn-outline-brand btn-icon" href="https://www.linkedin.com/in/ayakokaneko" target="_blank" aria-label="LinkedIn">
+                    <div class="socials d-flex justify-content-center align-items-center gap-4 flex-nowrap">
+                        <a class="btn btn-outline-brand btn-icon" href="https://www.linkedin.com/in/ayakokaneko" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
-                        <a class="btn btn-outline-brand btn-icon" href="https://github.com/AyakoKGriffith" target="_blank" aria-label="GitHub">
+                        <a class="btn btn-outline-brand btn-icon" href="https://github.com/AyakoKGriffith" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <i class="fa-brands fa-github"></i>
                         </a>
                         <a class="btn btn-outline-brand btn-icon" href="mailto:ayako.kaneko1997@gmail.com" aria-label="Email">
@@ -305,8 +426,9 @@
             <div class="col-12 col-lg-7">
                 <div class="contact-card">
                     <h4 class="mb-3">Message Me</h4>
-
+                    <div id="contactAlert" class="alert d-none" role="alert" aria-live="polite"></div>
                     <form id="contactForm" action="#" method="POST" novalidate>
+                        <input type="text" name="website" id="website" class="d-none" tabindex="-1" autocomplete="off" />
                         <div class="mb-3">
                             <label class="form-label visually-hidden" for="cName">Your Name</label>
                             <input id="cName" name="name" type="text" class="form-control contact-input" placeholder="Your Name*" required>
@@ -323,11 +445,11 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label visually-hidden" for="cMessage">Your Email</label>
+                            <label class="form-label visually-hidden" for="cMessage">Your Message</label>
                             <textarea id="cMessage" name="message" rows="4" class="form-control contact-input" placeholder="Your Message*" required></textarea>
                         </div>
 
-                        <button class="btn btn-send d-inline-flex align-items-center gap-2" type="submit">
+                        <button class="btn btn-send btn-outline-brand d-inline-flex align-items-center gap-2" type="submit">
                             <i class="fa-solid fa-paper-plane"></i>Send Message
                         </button>
                     </form>
@@ -339,11 +461,12 @@
     
     <footer class="footer bg-dark text-white py-1">
         <div class="container text-center">
-            <p>Copyright &copy; Ayako Kaneko Portfolio</p>
+            <p> &copy; 2025 Ayako Kaneko - All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
     
   </body>
