@@ -14,7 +14,7 @@ Includes a projects carousel, smooth in-page navigation, a “Message Me” form
 - Responsive layout with Bootstrap 5 (off-canvas mobile menu)
 - Hero typing effect
 - Sections for About, Education, Experience, Projects, Contact
-- Projects carousel with tech tags and action buttons (view / code / download)
+- Projects carousel with tech tags and action buttons (code / demo / view /download)
 - Contact form via EmailJS (honeypot + inline validation)
 
 ---
