@@ -1,12 +1,27 @@
-# React + Vite
+# 🌳Ayako Kaneko — Portfolio (React + Vite)🌳
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, accessible developer portfolio built with **React**, **Vite**, **Bootstrap 5**, and **Font Awesome**.  
+Includes a projects carousel, smooth in-page navigation, a “Message Me” form (EmailJS), and downloadable assets.
 
-Currently, two official plugins are available:
+**Live site:** https://ayakoneko.github.io/AyakoPortfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Repo:** https://github.com/ayakoneko/AyakoPortfolio
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- Responsive layout with Bootstrap 5 (off-canvas mobile menu)
+- Hero typing effect
+- Sections for About, Education, Experience, Projects, Contact
+- Projects carousel with tech tags and action buttons (view / code / download)
+- Contact form via EmailJS (honeypot + inline validation)
+
+---
+
+## 🧱 Tech Stack
+
+- React 18 + Vite
+- Bootstrap 5 + Font Awesome
+- EmailJS
+- Google Analytics 
