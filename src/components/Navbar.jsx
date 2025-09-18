@@ -3,16 +3,16 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand d-flex align-items-center gap-3" href="#home">
-          <img src="/images/logo2.jpg" alt="logo" className="navbar-brand-logo" />
+          <img src="images/logo2.jpg" alt="logo" className="navbar-brand-logo" />
           <p className="brand-name m-0">Ayako Kaneko</p>
         </a>
 
         <div className="nav-social d-none d-lg-flex">
           <a href="https://www.linkedin.com/in/ayakokaneko" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <img src="/images/LinkedIn.png" alt="LinkedIn" className="nav-social-img" />
+            <img src="images/LinkedIn.png" alt="LinkedIn" className="nav-social-img" />
           </a>
           <a href="https://github.com/ayakoneko" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <img src="/images/GitHub.png" alt="GitHub" className="nav-social-img" />
+            <img src="images/GitHub.png" alt="GitHub" className="nav-social-img" />
           </a>
         </div>
 
@@ -29,10 +29,10 @@ export default function Navbar() {
           <div className="offcanvas-body">
             <div className="nav-social d-lg-none mb-3">
               <a href="https://www.linkedin.com/in/ayakokaneko" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <img src="/images/LinkedIn.png" alt="LinkedIn" className="nav-social-img" />
+                <img src="images/LinkedIn.png" alt="LinkedIn" className="nav-social-img" />
               </a>
               <a href="https://github.com/ayakoneko" target="_blank" rel="noreferrer" aria-label="GitHub">
-                <img src="/images/GitHub.png" alt="GitHub" className="nav-social-img" />
+                <img src="images/GitHub.png" alt="GitHub" className="nav-social-img" />
               </a>
             </div>
 

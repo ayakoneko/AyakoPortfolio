@@ -21,7 +21,7 @@ export default function Profile() {
           <div className="col-12 col-xl-10 mx-auto">
             <div className="row align-items-lg-center gy-4 gx-5">
               <div className="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end mb-4 mb-lg-0">
-                <img className="profile_picture" src="/images/kaneko-ayako-08082025.jpg" alt="Ayako Kaneko" />
+                <img className="profile_picture" src="images/kaneko-ayako-08082025.jpg" alt="Ayako Kaneko" />
               </div>
 
               <div className="col-12 col-lg-8 text-center text-lg-start ps-lg-3">

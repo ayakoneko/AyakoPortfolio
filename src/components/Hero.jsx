@@ -5,7 +5,7 @@ export default function Hero() {
 
   return (
     <header id="home" className="hero">
-      <img className="hero-img" src="/images/tree5.webp" alt="tree street" />
+      <img className="hero-img" src="images/tree5.webp" alt="tree street" />
       <div className="hero-overlay" />
       <div className="hero-content text-center">
         <h1 className="hero-title">Ayako Kaneko</h1>
