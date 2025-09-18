@@ -6,7 +6,7 @@ export default function Profile() {
           <div className="col-12">
             <h2 className="fw-bold mb-3">About Me</h2>
             <p className="lead mx-auto mb-2" style={{ maxWidth: 820 }}>
-              Aspiring software developer with experience in full-stack web apps and backend systems using Python, PHP/Laravel, and Java. Currently pursuing a Master of IT (GPA 6.50/7.00) with strengths in algorithms, system design, and OOP. Skilled in clean coding, Git, and agile teamwork, with 5 years in financial services bringing strong project delivery, communication, and collaboration skills.
+              Aspiring software developer with experience in full-stack web apps and backend systems using Python, PHP/Laravel, and Java. Currently pursuing a Master of IT with strengths in algorithms, system design, and OOP. Skilled in clean coding, Git, and agile teamwork, with 5 years in financial services bringing strong project delivery, communication, and collaboration skills.
             </p>
             <a href="https://ayakoneko.github.io/resume/resume.pdf" target="_blank" rel="noreferrer" className="btn btn-brand">
               <i className="fa-solid fa-file-pdf me-2" /> View Resume

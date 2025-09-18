@@ -47,8 +47,8 @@ export default function Navbar() {
                   <li><a className="dropdown-item project-link" href="#proj-tetris" data-slide-to="0">Tetris Game Clone</a></li>
                   <li><a className="dropdown-item project-link" href="#proj-eventbooking" data-slide-to="0">Event Booking Website</a></li>
                   <li><a className="dropdown-item project-link" href="#proj-timecapsule" data-slide-to="0">Time-capsule Memory System</a></li>
-                  <li><a className="dropdown-item project-link" href="#proj-todoist" data-slide-to="0">Todoist Clone</a></li>
-                  <li><a className="dropdown-item project-link" href="#proj-portfolio" data-slide-to="1">My Portfolio</a></li>
+                  <li><a className="dropdown-item project-link" href="#proj-portfolio" data-slide-to="0">My Portfolio</a></li>
+                  <li><a className="dropdown-item project-link" href="#proj-todoist" data-slide-to="1">Todoist Clone</a></li>
                   <li><a className="dropdown-item project-link" href="#proj-smarthome" data-slide-to="1">Smart Home Application</a></li>
                   <li><a className="dropdown-item project-link" href="#proj-dicom" data-slide-to="1">DICOM Data Management</a></li>
                   <li><a className="dropdown-item project-link" href="#proj-XRflashcard" data-slide-to="1">XR Flashcard Project</a></li>

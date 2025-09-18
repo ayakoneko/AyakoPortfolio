@@ -32,26 +32,26 @@ export const projectPages = [
       ]
     },
     {
+      id: "proj-portfolio",
+      img: "/images/Portfolio.png",
+      title: "My Portfolio",
+      text: "Responsive portfolio with projects, contact form (EmailJS) and Bootstrap layout.",
+      tech: ["React", "CSS", "JavaScript", "Bootstrap"],
+      actions: [
+        { kind: "brand", href: "https://ayakoneko.github.io/AyakoPortfolio/", label: "Link", icon: "fa-solid fa-arrow-up-right-from-square" },
+        { kind: "outline", href: "https://github.com/ayakoneko/AyakoPortfolio", label: "Code", icon: "fa-brands fa-github" }
+      ]
+    }
+  ],
+  // page 1
+  [
+    {
       id: "proj-todoist",
       img: "/images/ComingSoon.png",
       title: "Todoist Clone",
       text: "Task management clone focusing on clean API design and pragmatic UX.",
       tech: ["Golang", "JavaScript", "PostgreSQL"],
       actions: [{ kind: "outline", href: "https://github.com/ayakoneko/TodoistClone", label: "Code", icon: "fa-brands fa-github" }]
-    }
-  ],
-  // page 1
-  [
-    {
-      id: "proj-portfolio",
-      img: "/images/Portfolio.png",
-      title: "My Portfolio",
-      text: "Responsive portfolio with projects, contact form (EmailJS) and Bootstrap layout.",
-      tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      actions: [
-        { kind: "brand", href: "https://ayakoneko.github.io/AyakoPortfolio/", label: "Link", icon: "fa-solid fa-arrow-up-right-from-square" },
-        { kind: "outline", href: "https://github.com/ayakoneko/AyakoPortfolio", label: "Code", icon: "fa-brands fa-github" }
-      ]
     },
     {
       id: "proj-smarthome",
@@ -61,7 +61,7 @@ export const projectPages = [
       tech: ["UML", "Use Cases"],
       actions: [
         { kind: "brand", href: "/files/SmartHome-UseCase-Design.pdf", label: "View", icon: "fa-solid fa-file-pdf" },
-        { kind: "outline", href: "/files/SmartHome-UseCase-Design.pdf", label: "Download", icon: "fa-solid fa-download" }
+        { kind: "download", href: "/files/SmartHome-UseCase-Design.pdf", label: "Download", icon: "fa-solid fa-download", filename: "SmartHome-UseCase-Design.pdf" }
       ]
     },
     {
