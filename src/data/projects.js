@@ -8,8 +8,9 @@ export const projectPages = [
       text: "Desktop clone of Tetris implemented with clear MVC separation and robust game loop.",
       tech: ["Java", "MVC", "OOP"],
       actions: [
-        { kind: "brand", href: "https://www.youtube.com/shorts/iusKhrHulPc", label: "Demo", icon: "fa-solid fa-video" },
-        { kind: "outline", href: "https://github.com/Cedou90/G11_OOSD_Tetris_Game", label: "Code", icon: "fa-brands fa-github" }
+        { kind: "brand", href: "https://www.youtube.com/shorts/iusKhrHulPc", label: "Demo1", icon: "fa-solid fa-video" },
+        { kind: "brand", href: "https://www.youtube.com/watch?v=HNqPD5l0_mk&t=7s", label: "Demo2", icon: "fa-solid fa-video" },
+        { kind: "outline", href: "https://github.com/ayakoneko/TetrisGamewithJava", label: "Code", icon: "fa-brands fa-github" }
       ]
     },
     {
